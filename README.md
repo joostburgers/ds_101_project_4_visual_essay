@@ -1,53 +1,66 @@
-# DS 101 Project 4: Visual Essay
+# DS 101 Project 5: Mapping Emotions
 
-## Setup Instructions
+## Overview
 
-### Step 1: Run Setup
+This is a **collaborative group project** completed in GitHub Codespaces. Before you start, read [COLLABORATION_GUIDE.md](COLLABORATION_GUIDE.md) to understand your role and which files you are responsible for editing.
 
-Open your terminal or command prompt and run:
+---
+
+## Files You Will Edit
+
+| File | Who | What |
+|------|-----|-------|
+| `project_4_template.ipynb` | All members (assigned sections) | Main whitepaper notebook |
+| `flythrough_config.js` | All members (assigned chapters) | Interactive map story |
+| `team_data.json` | All members (your slot only) | Team member profiles |
+| `index.html` | Member 1 only | Home page overview text |
+| `images/` | All members | Add your own photos here |
+
+Everything else in this folder is infrastructure — it is hidden from the file explorer automatically.
+
+---
+
+## Getting Started
+
+### Install packages (first time only)
 
 ```bash
-python setup.py
+pip install pandas plotly
 ```
 
-(If that doesn't work, try `python3 setup.py`)
+### Open the notebook
 
-The script will automatically:
-- Check your Python version
-- Create a virtual environment
-- Install all required packages (pandas, plotly, jupyter)
-- Show you how to get started
-
-### Step 2: Start Working
-
-Every time you work on the project:
-
-**Activate the virtual environment:**
-- Windows: `venv\Scripts\activate`
-- Mac/Linux: `source venv/bin/activate`
-
-**Launch Jupyter Notebook:**
 ```bash
 jupyter notebook project_4_template.ipynb
 ```
 
-**When finished:**
-- Close the browser
-- Press `Ctrl+C` in the terminal
-- Type `deactivate`
+---
+
+## Publishing the Website
+
+When your team is ready to publish (after each work session, or for final submission):
+
+```bash
+bash publish.sh
+```
+
+This script will:
+1. Export the notebook → `whitepaper.html`
+2. Copy all website files into `docs/` (what GitHub Pages serves)
+3. Commit and push everything to GitHub
+
+> **Before running:** Make sure all your changes are saved and you have run `git pull` to get your teammates' latest work.
 
 ---
 
 ## Troubleshooting
 
-**"python not found"**  
-→ Try `python3 setup.py` or install Python from [python.org](https://www.python.org/downloads/)
+**"Module not found" error in notebook**
+→ Run `pip install pandas plotly` in the terminal, then restart the kernel
 
-**"Module not found" error in notebook**  
-→ Make sure you activated the virtual environment first
+**publish.sh fails with a merge conflict**
+→ See [COLLABORATION_GUIDE.md](COLLABORATION_GUIDE.md) — resolve the conflict, then re-run the script
 
-**Setup fails**  
-→ Check your internet connection and try again
-
-Need more help? See [README_SETUP.md](README_SETUP.md) for detailed troubleshooting.
+**Map not loading in preview**
+→ Use the Codespaces port preview to open `flythrough_template.html`, not the raw file opener
 

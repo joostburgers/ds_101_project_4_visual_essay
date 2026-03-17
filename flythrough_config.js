@@ -36,6 +36,7 @@ var config = {
     
     chapters: [
         {
+            // ===== ALL TEAM SIZES: Member 1 =====
             // CHAPTER 1: Overview of both locations
             id: 'intro',
             title: 'Reddit Sentiment Analysis: Two College Towns',
@@ -54,6 +55,7 @@ var config = {
         },
         
         {
+            // ===== 4-MEMBER TEAM: Member 2 | 5-MEMBER TEAM: Member 2 =====
             // CHAPTER 2: JMU Campus Overview
             id: 'jmu-campus',
             title: 'JMU Campus Overview',
@@ -72,6 +74,7 @@ var config = {
         },
         
         {
+            // ===== 4-MEMBER TEAM: Member 2 | 5-MEMBER TEAM: Member 2 =====
             // CHAPTER 3: JMU Location 1
             id: 'jmu-location-1',
             title: 'JMU Location 1: [Name Here]',
@@ -100,6 +103,7 @@ var config = {
         },
         
         {
+            // ===== 4-MEMBER TEAM: Member 2 | 5-MEMBER TEAM: Member 3 =====
             // CHAPTER 4: JMU Location 2
             id: 'jmu-location-2',
             title: 'JMU Location 2: [Name Here]',
@@ -126,6 +130,7 @@ var config = {
         },
         
         {
+            // ===== 4-MEMBER TEAM: Member 3 | 5-MEMBER TEAM: Member 3 =====
             // CHAPTER 5: JMU Location 3
             id: 'jmu-location-3',
             title: 'JMU Location 3: [Name Here]',
@@ -152,7 +157,8 @@ var config = {
         },
         
         {
-            // CHAPTER 6: UNC Campus Overview
+            // ===== 4-MEMBER TEAM: Member 3 | 5-MEMBER TEAM: Member 4 =====
+            // CHAPTER 6: Other School Campus Overview
             id: 'unc-campus',
             title: 'UNC Campus Overview',
             description: 'University of North Carolina at Chapel Hill. Three key locations emerge from student discussions.',
@@ -169,7 +175,8 @@ var config = {
         },
         
         {
-            // CHAPTER 7: UNC Location 1
+            // ===== 4-MEMBER TEAM: Member 4 | 5-MEMBER TEAM: Member 4 =====
+            // CHAPTER 7: Other School Location 1
             id: 'unc-location-1',
             title: 'UNC Location 1: [Name Here]',
             description: 'Add your description here.',
@@ -195,7 +202,8 @@ var config = {
         },
         
         {
-            // CHAPTER 8: UNC Location 2
+            // ===== 4-MEMBER TEAM: Member 4 | 5-MEMBER TEAM: Member 5 =====
+            // CHAPTER 8: Other School Location 2
             id: 'unc-location-2',
             title: 'UNC Location 2: [Name Here]',
             description: 'Add your description here.',
@@ -221,7 +229,8 @@ var config = {
         },
         
         {
-            // CHAPTER 9: UNC Location 3
+            // ===== 4-MEMBER TEAM: Member 4 | 5-MEMBER TEAM: Member 5 =====
+            // CHAPTER 9: Other School Location 3
             id: 'unc-location-3',
             title: 'UNC Location 3: [Name Here]',
             description: 'Add your description here.',
@@ -246,6 +255,7 @@ var config = {
             showData: 'individual'
         },
         {
+            // ===== ALL TEAM SIZES: Member 1 =====
             // CHAPTER 10: Final zoom out
             id: 'conclusion',
             title: 'Conclusion: Comparing Campus Sentiment',

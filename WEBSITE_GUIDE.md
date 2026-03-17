@@ -1,11 +1,40 @@
-# Website Customization Guide
+# Website Customization Guide — Project 5: Mapping Emotions
 
 ## Overview
 This website includes:
-- **Home page** (index.html) - Landing page with project overview
-- **Team page** (team.html) - Team member profiles with photos/initials
-- **Interactive Tour** (flythrough_template.html) - Scrollytelling map flythrough
-- **Whitepaper** (whitepaper.html) - Technical documentation
+- **Home page** (`index.html`) - Landing page with project overview
+- **Team page** (`team.html`) - Team member profiles with photos/initials
+- **Interactive Tour** (`flythrough_template.html`) - Scrollytelling map flythrough
+- **Whitepaper** (`whitepaper.html`) - Technical documentation
+
+> **Before you start:** Read [COLLABORATION_GUIDE.md](COLLABORATION_GUIDE.md) to understand your assigned role. Each member is responsible for specific files and sections. Editing outside your assigned scope risks creating merge conflicts.
+
+## Role Assignments at a Glance
+
+Your instructor will tell you your team size. Find your section below and identify your member number and chapter assignments.
+
+### 4-Member Team
+
+| Member | Primary File(s) | Flythrough Chapters |
+|--------|----------------|---------------------|
+| **Member 1** (Project Lead) | `index.html` overview; `team_data.json` slot 1 | Ch. 1 (Intro), Ch. 10 (Conclusion) |
+| **Member 2** (JMU Analyst) | `team_data.json` slot 2 | Ch. 2 (JMU Overview), Ch. 3, Ch. 4 |
+| **Member 3** (Comparison Analyst) | `team_data.json` slot 3 | Ch. 5 (JMU Loc 3), Ch. 6 (Other school overview) |
+| **Member 4** (Other School Analyst) | `team_data.json` slot 4 | Ch. 7, Ch. 8, Ch. 9 |
+
+*4-member note: Member 2 and Member 4 each own 3 chapters; Members 1 and 3 own 2 each. Delete the slot 5 object from `team_data.json` when finished.*
+
+### 5-Member Team
+
+| Member | Primary File(s) | Flythrough Chapters |
+|--------|----------------|---------------------|
+| **Member 1** (Project Lead) | `index.html` overview; `team_data.json` slot 1 | Ch. 1 (Intro), Ch. 10 (Conclusion) |
+| **Member 2** (JMU Analyst) | `team_data.json` slot 2 | Ch. 2 (JMU Overview), Ch. 3 |
+| **Member 3** (JMU Loc Analyst) | `team_data.json` slot 3 | Ch. 4, Ch. 5 |
+| **Member 4** (Other School Analyst) | `team_data.json` slot 4 | Ch. 6 (Other school overview), Ch. 7 |
+| **Member 5** (Other School Analyst) | `team_data.json` slot 5 | Ch. 8, Ch. 9 |
+
+**All members:** Every team member edits **only their own slot** in `team_data.json` and **only their assigned chapters** in `flythrough_config.js`. The chapters in both files are labeled with comments for both team sizes.
 
 ## Quick Start
 
@@ -15,13 +44,14 @@ This website includes:
 
 ## Three Files to Customize
 
-### 1. Team Information (`team_data.json`)
-Add your team members:
+### 1. Team Information (`team_data.json`) — **Every Member Edits Their Own Slot**
+Each member has a pre-numbered slot in the file. **Only edit your own slot** — do not touch any other team member's entry. Each slot is labeled with a comment above it.
 
 ```json
 {
     "team": [
         {
+            "_member": "MEMBER 1 — Edit this slot",
             "name": "Your Name",
             "major": "Your Major",
             "role": "Your Project Role",
@@ -34,17 +64,15 @@ Add your team members:
 
 **Tips:**
 - Leave `"github": ""` if you don't have one
-- Add headshot image path like `"images/yourname.jpg"` or leave blank for initials
+- Add headshot image path like `"headshot": "images/yourname.jpg"` or leave blank for initials
 - Initials are automatically generated from your name
+- **Commit your slot change immediately** before your teammate edits theirs
 
-### 2. Home Page Content (`index.html`)
-Replace the lorem ipsum text:
-- Find the "Project Overview" section
-- Replace the three paragraphs with your actual project description
-- Keep it concise and engaging
+### 2. Home Page Content (`index.html`) — **Member 1 Only**
+Replace the lorem ipsum text in the "Project Overview" section. The section is marked with a comment in the HTML. Do not edit anything else in this file.
 
-### 3. Interactive Flythrough (`flythrough_config.js`)
-This is your main customization task. The file has 10 pre-structured chapters:
+### 3. Interactive Flythrough (`flythrough_config.js`) — **Assigned by Chapter**
+Each chapter block is labeled at the top with which member should edit it. Only touch your assigned chapters. See the full guide below and in [FLYTHROUGH_INSTRUCTIONS.md](FLYTHROUGH_INSTRUCTIONS.md).
 
 **Map Style** (lines ~10-20):
 - Uncomment your preferred map style
@@ -54,12 +82,13 @@ This is your main customization task. The file has 10 pre-structured chapters:
 - Choose `'RdYlGn'` (Red→Yellow→Green) or `'Portland'` (Blue→White→Red)
 
 **Chapters** (lines ~35-250):
-Each chapter needs:
-- `title`: Your location name
-- `description`: Your analysis (supports HTML formatting!)
+Each chapter is pre-labeled (e.g., `// ===== MEMBER 1 EDITS THIS CHAPTER =====`). Each chapter needs:
+
+- `title`: Location name
+- `description`: Your analysis (supports HTML formatting)
 - `image`: Path to image in `./images/` folder
 - `camera`: Where the map flies (latitude, longitude, zoom)
-- `location`: Data to display (only for individual locations, not overviews)
+- `location`: Data to display (only for individual location chapters)
 - `showData`: What markers to show on map
 
 **Example Individual Location:**
@@ -188,10 +217,10 @@ Each chapter needs:
 
 Before presenting your project, make sure you've:
 
-- [ ] Updated `team_data.json` with all team members
-- [ ] Replaced lorem ipsum in `index.html` with your project overview
-- [ ] Filled in all 10 chapters in `flythrough_config.js` with real data
-- [ ] Added actual images to `images/` folder
+- [ ] **Member 1**: Replaced lorem ipsum in `index.html` with your project overview
+- [ ] **All members**: Updated your own slot in `team_data.json` with your real info
+- [ ] **All members**: Filled in your assigned chapters in `flythrough_config.js` with real data
+- [ ] Added actual images to `images/` folder (each member adds their images)
 - [ ] Tested the flythrough by scrolling through all chapters
 - [ ] Checked for JavaScript errors in browser console (F12)
 - [ ] Previewed on mobile/different screen sizes
@@ -199,8 +228,8 @@ Before presenting your project, make sure you've:
 
 ## Need More Help?
 
-See `FLYTHROUGH_INSTRUCTIONS.md` for detailed flythrough customization guide.
+See [FLYTHROUGH_INSTRUCTIONS.md](FLYTHROUGH_INSTRUCTIONS.md) for detailed flythrough customization, and [COLLABORATION_GUIDE.md](COLLABORATION_GUIDE.md) for Git workflow and merge conflict help.
 
 ---
 
-**Good luck with your project! 🎓**
+**Good luck with your project!**

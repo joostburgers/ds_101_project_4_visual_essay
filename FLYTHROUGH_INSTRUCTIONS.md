@@ -1,4 +1,6 @@
-# Flythrough Instructions (No API Tokens Required!)
+# Flythrough Instructions — Project 5: Mapping Emotions
+
+> **Collaborative note:** Chapters in `flythrough_config.js` are pre-labeled with which team member should edit them (e.g., `// ===== MEMBER 2 EDITS THIS CHAPTER =====`). Only edit the chapters assigned to you. See [COLLABORATION_GUIDE.md](COLLABORATION_GUIDE.md) for full workflow guidance.
 
 ## Overview
 This version uses **OpenStreetMap** and **Leaflet** instead of Mapbox, so you don't need any API tokens or accounts. Everything is completely free!
@@ -101,17 +103,20 @@ colorScale: 'Portland',  // Blue (negative) → White → Red (positive)
 
 ### 3. Fill In Your Chapters
 
-The template includes 10 pre-structured chapters:
-1. **Intro** - Wide view of both campuses
-2. **JMU Campus** - Overview of JMU locations
-3. **JMU Location 1** - Individual JMU location
-4. **JMU Location 2** - Individual JMU location
-5. **JMU Location 3** - Individual JMU location
-6. **UNC Campus** - Overview of UNC locations
-7. **UNC Location 1** - Individual UNC location
-8. **UNC Location 2** - Individual UNC location
-9. **UNC Location 3** - Individual UNC location
-10. **Conclusion** - Wide view wrapping up
+The template includes 10 pre-structured chapters. Each chapter comment shows assignments for both team sizes — read the column that matches yours:
+
+| Chapter | Content | 4-Member Team | 5-Member Team |
+|---------|---------|---------------|---------------|
+| 1. Intro | Wide view of both campuses | Member 1 | Member 1 |
+| 2. JMU Campus | Overview of JMU locations | Member 2 | Member 2 |
+| 3. JMU Location 1 | Individual JMU location | Member 2 | Member 2 |
+| 4. JMU Location 2 | Individual JMU location | Member 2 | Member 3 |
+| 5. JMU Location 3 | Individual JMU location | Member 3 | Member 3 |
+| 6. Other School Campus | Overview of other school | Member 3 | Member 4 |
+| 7. Other School Location 1 | Individual location | Member 4 | Member 4 |
+| 8. Other School Location 2 | Individual location | Member 4 | Member 5 |
+| 9. Other School Location 3 | Individual location | Member 4 | Member 5 |
+| 10. Conclusion | Wide wrap-up view | Member 1 | Member 1 |
 
 **For each location chapter:**
 1. Copy latitude/longitude from your CSV
